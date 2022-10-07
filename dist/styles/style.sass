@@ -1,0 +1,306 @@
+@import 'https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap'
+
+* 
+    margin: 0
+    padding: 0
+    font-family: 'Outfit', sans-serif
+
+html
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-x: hidden
+
+body 
+    background: #e7eaee
+    padding: 0 10vw
+    font-family: 'Outfit', sans-serif
+    display: flex
+    justify-content: center
+    width: 100%
+
+.container
+    width: 100%
+
+.logo
+    height: 8vh
+
+.nav
+    width: 100%
+    padding: 1vh 10vw
+    margin-left: -10vw
+    height: 6vh
+    display: flex
+    flex-wrap: nowrap
+    justify-content: flex-start
+    align-items: center
+    box-shadow: #ddd6d6 0 10px 10px
+
+.nav .navlist
+    margin-left: 2vh
+    display: flex
+    flex-wrap: nowrap
+
+.nav .navlist a
+    font-size: 1.2rem
+    color: #8F9396
+    margin: 0 1.5vh
+    text-decoration: none
+    transition: 0.3s
+
+.nav .navlist a:hover
+    color: #3d3e3f
+
+.search
+    margin: 3vh auto
+    width: 800px
+    height: 3em
+    border-radius: 1em
+    background-color: #f6f6f6
+    box-shadow: #ddd6d6 0 10px 10px
+    display: flex
+    justify-content: end
+    align-items: center
+    display: flex
+
+.searchbar
+    margin: 3vh auto
+    width: 97.5%
+    padding-left: 1.5%
+    margin-left: 1%
+    height: 3vh
+    border: 0
+    background-color: #f6f6f6
+    font-size: 1.1rem
+    color: #8F9396
+
+.searchbar:focus
+    outline: 0
+
+.searchbtn
+    width: 35px
+    height: 35px
+    border-radius: 10px
+    margin-right: 1vh
+    background-color: #e7eaee
+    box-shadow: #b4bbc0 0 10px 10px
+    text-align: center
+    color: #8F9396
+    font-size: 1.1rem
+    line-height: 35px
+    border: 0
+    transition: 0.3s
+
+.searchbtn:hover
+    background-color: #8F9396
+    color: #e7eaee
+    box-shadow: none
+
+.mainpanel
+    width: 100%
+    height: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+#loading-div
+    height: 100%
+    position: absolute
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 99
+    background-color: white
+
+.loading-ball
+    height: 60px
+    filter: brightness(80%)
+    animation: rotatePokeBall ease-in-out 3s infinite
+
+.hide
+    display: none !important
+
+
+@keyframes hideLoading
+    0% 
+        top: 0
+    100% 
+        top: -100vh
+
+
+@keyframes rotatePokeBall
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+.slide-out 
+    animation: slideOut ease-in-out 0.35s
+    animation-fill-mode: forwards
+
+
+@keyframes slideOut 
+    0% 
+        right: calc(10vw - 20px)
+    100% 
+        right: -400px
+
+.slide-in 
+    animation: slideIn ease-in-out 0.35s
+    animation-fill-mode: forwards
+
+@keyframes slideIn 
+    0% 
+        right: -400px
+    100% 
+        right: calc(10vw - 20px)
+
+.pokebox
+    border: 3px solid white
+    min-width: 15%
+    max-width: 100%
+    height: 10em
+    margin: 1em
+    background-color: white
+    border-radius: 20px
+    display: grid
+    box-shadow: #ddd6d6 0 10px 10px
+    justify-content: center
+    justify-items: center
+
+.pokebox-image
+    margin: -2em auto 0 auto
+    width: 6em
+
+.type-container
+    padding: 5px 10px
+    border-radius: 10px
+    margin: 5px
+    float: left
+
+.mainpanellogbox
+    display: flex
+    grid-template-columns: 1fr
+    justify-content: center
+
+.logbox
+    margin-top: 1em 
+    width: 400px
+    height: 400px
+    display: grid
+    text-align: center
+    justify-content: center
+    background-color: #fff
+    border-radius: 15px
+    box-shadow: #ddd6d6 0 10px 10px
+    color:#8F9396
+
+.logbox h2
+    margin-top: 1em
+
+.logbox input
+    height: 50px
+    border: 0
+    padding-left: 10px
+    width: 300px
+    background-color: #ddd
+    border-radius: 5px
+    font-size: 1rem
+    color:#a9adb0
+
+#email
+    display: none
+
+.logbox input:focus
+    background-color: #eae6e6
+    outline: 0
+
+.switch
+    position: absolute
+    margin-left: 330px
+    margin-top: 25px
+    display: inline-block
+    width: 50px
+    height: 28px
+
+.switch input 
+  opacity: 0
+  width: 0
+  height: 0
+
+
+/* The slider */
+.slider 
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+
+.slider:before
+  position: absolute
+  content: ""
+  height: 20px
+  width: 20px
+  left: 3px
+  bottom: 4px
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+input:checked + .slider 
+  background-color: #2196F3
+
+
+input:focus + .slider 
+  box-shadow: 0 0 1px #2196F3
+
+input:checked + .slider:before 
+  -webkit-transform: translateX(23px)
+  -ms-transform: translateX(23px)
+  transform: translateX(23px)
+
+.slider.round 
+  border-radius: 34px
+
+.slider.round:before
+  border-radius: 50%
+
+@media(max-width: 960px)
+    body
+        padding: 5vw
+    .search
+        width: 500px
+    .pokebox
+        width: 25%
+
+@media(max-width: 660px)
+    body
+        padding: 5vw
+    .search
+        width: auto
+        margin: 1em 0
+    .pokebox
+        width: 40%
+
+@media(max-width: 420px)
+    .search
+        display: none
+    .navlist a
+        display: none
+    .logo
+        height:8em
+        margin: -6em auto
+    .pokebox
+        width: 90%
+    .logbox
+        width: 100%
+        box-shadow: none
+        background-color: transparent
+    .logbox input
+        width: 100%

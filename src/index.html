@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="styles/dist/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body id="index_body">
+    <div id="loading-div">
+        <img src="Styles/photos/pokeball-icon.png" class="loading-ball">
+    </div>
+    <div class="container" id="pokedex-list">
+        <div class="nav">
+            <img src="Styles/photos/pokeapi_logo.png" alt="PokeApi_Logo" class="logo">
+            <div class="navlist">
+                <a href="index.html">Home</a>
+                <a href="pages/favorites.html">Favorites</a>
+                <a href="pages/authentication.html">Authentication</a>
+            </div>
+        </div>
+        <div class="search">
+            <input id="search-input" class="searchbar" placeholder="Search your Pokemon">
+            <button class="searchbtn" id="seach_btn">
+                <i class="bx bx-search"></i>
+            </button>
+        </div>
+        <div class="mainpanel" id="pokedex-list-render-container">
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
