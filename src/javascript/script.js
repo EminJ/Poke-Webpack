@@ -79,6 +79,13 @@ async function getAllTypes() {
     loadingCompletion();
 };
 
+function forget(){
+    localStorage.setItem("username", "");
+    localStorage.setItem("password", "");
+    localStorage.setItem("email", "");
+    localStorage.setItem("log", 0);
+}
+
 function loadingCompletion() {
     const loadingDiv = document.getElementById('loading-div');
     loadingDiv.classList.add('hideLoading');
